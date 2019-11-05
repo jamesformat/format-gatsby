@@ -5,7 +5,9 @@
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 $format-blue: #02addd
+$format-blue--darkened: #0094C4
 $format-green: #00b2ac
+$format-gray: #818285
 $primary: $format-green
 $primary-invert: $kaldi-red-invert
 $body-color: #333
@@ -132,6 +134,12 @@ $menu-label-color: $white-ter
 
 @import "~bulma"
 
+.content h1, .content h2, .content h3, .content h4, .content h5
+  color: $format-gray
+
+a
+  color: $format-blue
+  text-decoration: underline
 // bulma overrides
 .section
   padding-left: 0.5rem
@@ -208,6 +216,10 @@ $menu-label-color: $white-ter
     background: $format-green
     visibility: hidden
 
+.button.is-link
+  background-color: $format-blue
+  &:hover
+    background-color: $format-blue--darkened
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail

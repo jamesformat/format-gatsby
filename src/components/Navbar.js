@@ -8,6 +8,9 @@ const NavbarWrapper = styled.div`
   flex: 1;
   flex-direction: column;
 
+  a {
+    text-decoration: none;
+  }
   @media screen and (min-width: 1024px) {
     flex-direction: row;
   }

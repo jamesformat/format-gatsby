@@ -29,7 +29,7 @@ const NavbarWrapper = styled.div`
 
 const NavbarMenu = styled.div`
   flex: 1;
-  justify-content: space-between;
+  justify-content: space-around;
   a {
     &:first-child {
       @media screen and (min-width: 1024px) {

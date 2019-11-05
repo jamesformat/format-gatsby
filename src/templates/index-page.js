@@ -12,12 +12,19 @@ const LandingPageText = Styled.div`
   font-size: 1.25rem;
 `;
 const LandingPage = Styled.div`
+  .column--grid {
+    display: flex;
+    align-items: center;
+    .landing-page__grid {
+      width: 100%;
+    }
+  }
   .column--text {
     display: flex;
     align-items: center;
   }
   .landing-page__grid, .column--text .content {
-    max-width: 600px;
+    max-width: 500px;
   }
   @media screen and (max-width: 768px) {
     section{

@@ -12,12 +12,12 @@ import {
 const backgroundColors = [formatGray, formatGreen, formatBlue];
 
 const GridItem = Styled.div`
-  width: 90%;
+  width: 100%;
   background: ${formatGreenTranslucent};
   grid-row: span 1;
   grid-column: span 1;
   position: relative;
-  border: 2px solid ${formatGreen};
+  box-shadow: 0px 0px 1px formatGray;
   img {
     position: absolute;
     top: 0;
@@ -26,12 +26,22 @@ const GridItem = Styled.div`
     left: 0;
     width: 100%;
   }
+  a:hover:after {
+    content: '';
+    background: ${formatGreenTranslucent};
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+  }
   &:before{ 
     content: '';
-    display: inline-block;
+    display: block;
     width: 1px;
     height: 0;
-    padding-bottom: 90%;
+    padding-bottom: 100%;
   }
   .item:nth-child(1) {
     grid-row-start: 1;
@@ -136,7 +146,7 @@ class GridItems extends Component {
                   aspectRatio: 1,
                   src: block.image.childImageSharp.thumbnail.src,
                   srcSet: block.image.childImageSharp.thumbnail.srcSet,
-                  sizes: "100% 100%"
+                  sizes: "135px 135px"
                 }}
               />
             </div>

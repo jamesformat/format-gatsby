@@ -145,10 +145,12 @@ $menu-label-color: $white-ter
 .navbar-menu .navbar-item
   text-transform: lowercase
   color: $format-green
-  padding-bottom: 0
   &:after
     content: '.'
 @media screen and (min-width: 1024px)
+  .navbar-menu .navbar-item
+    padding-bottom: 0
+
   .navbar
     min-height: 6rem
   .navbar > .container .navbar-menu, .container > .navbar .navbar-menu

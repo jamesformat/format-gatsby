@@ -35,5 +35,6 @@ gridItems:
     title: ' '
   - image: /img/grid-3.jpg
     title: ' '
+  - image: /img/grid-2.jpg
 ---
 

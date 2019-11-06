@@ -133,7 +133,7 @@ class GridItems extends Component {
               ) : (
                 "noimage"
               )}
-              {block.title && block.title.length && (
+              {block.title && block.title.replace(" ", "").length > 0 && (
                 <h5 className="grid-item__title">{block.title}</h5>
               )}
             </Link>

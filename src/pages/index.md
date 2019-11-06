@@ -33,8 +33,5 @@ gridItems:
     title: ' '
   - image: /img/rear-square.jpg
     title: ' '
-  - image: /img/grid-3.jpg
-    title: ' '
-  - image: /img/grid-2.jpg
 ---
 

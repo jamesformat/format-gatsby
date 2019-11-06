@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
-title: A Clean Transformation in W9
+title: Elgin Avenue
 date: 2015-06-01T16:55:00.000Z
 description: >
   Format are proud to have worked with Knight James Developments on the
   re-imagining of this lower ground floor 2 bed flat near Maida Vale.
 featuredpost: true
-featuredimage: /img/tumblr_inline_np9wii2zkh1rwmaks_540.jpg
+featuredimage: /img/tumblr_inline_np9w9pbjpz1rwmaks_540.jpg
 tags:
   - format
   - project

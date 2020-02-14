@@ -16,4 +16,6 @@ tags:
   - zinc
   - glazing
 ---
+![](/img/stoke-newington-2019-1-.jpg)
+
 The design included renovations to a basement bedroom with en-suite shower room; the bedroom opens onto a light-well between the house and the extension. The large windows provide a visual connection between the different spaces and levels of the split level ground floor, basement, dining area and the garden.

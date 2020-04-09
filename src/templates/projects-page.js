@@ -18,7 +18,7 @@ export default () => (
       query ProjectsQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { tags: { in: ["format"] } } }
+          filter: { frontmatter: { tags: { in: ["projects", "project"] } } }
         ) {
           edges {
             node {

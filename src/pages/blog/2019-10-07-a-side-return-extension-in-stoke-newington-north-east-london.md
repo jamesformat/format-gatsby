@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 'Stoke Newington, N16'
-date: 2019-09-28T16:53:00.000Z
+date: 2020-03-23T17:53:00.000Z
 description: >-
   A side return extension for a young family in Stoke Newington, North East
   London. Format carried out all the initial design, planning application,

@@ -20,6 +20,9 @@ tags:
   - rear extensions
   - Hertfordshire
   - Potters Bar
+  - Hertsmere
+  - planning permission
+  - permitted development
 ---
 ![](/img/img_1851.jpg)
 

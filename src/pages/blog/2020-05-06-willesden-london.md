@@ -13,12 +13,15 @@ featuredimage: /img/willesden-green-2019-1-.jpg
 tags:
   - projects
   - format
-  - home extensions
+  - brown field
   - Format Extend
   - extensions
   - glazing
-  - rear extensions
+  - new build
   - North-west London
+  - willesden
+  - houses
+  - planning permission
 ---
 ![](/img/willesden-green-2019-1-.jpg)
 

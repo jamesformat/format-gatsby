@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Willesden, London'
+title: 'Willesden, NW2'
 date: 2020-03-09T17:24:59.441Z
 description: >-
   A new-build two bedroom house with garden, built on a difficult, triangular

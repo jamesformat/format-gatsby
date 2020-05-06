@@ -11,8 +11,14 @@ description: >-
 featuredpost: true
 featuredimage: /img/willesden-green-2019-1-.jpg
 tags:
-  - Projects
-  - ''
+  - projects
+  - format
+  - home extensions
+  - Format Extend
+  - extensions
+  - glazing
+  - rear extensions
+  - North-west London
 ---
 ![](/img/willesden-green-2019-1-.jpg)
 

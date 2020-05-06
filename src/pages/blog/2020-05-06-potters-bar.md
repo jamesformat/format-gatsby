@@ -12,7 +12,14 @@ featuredpost: true
 featuredimage: /img/img_1851.jpg
 tags:
   - projects
-  - ''
+  - format
+  - home extensions
+  - Format Extend
+  - extensions
+  - glazing
+  - rear extensions
+  - Hertfordshire
+  - Potters Bar
 ---
 ![](/img/img_1851.jpg)
 

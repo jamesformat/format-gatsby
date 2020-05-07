@@ -30,10 +30,10 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet}
       <BlogStyles className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-8 is-offset-2">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
@@ -60,10 +60,14 @@ export const BlogPostTemplate = ({
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
+  contentComponent: PropTypes.func.isRequired,
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  helmet: PropTypes.node,
+};
+BlogPostTemplate.defaultProps = {
+  helmet: null,
 };
 
 const BlogPost = ({ data }) => {

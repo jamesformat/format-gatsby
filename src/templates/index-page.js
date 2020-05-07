@@ -24,7 +24,7 @@ const LandingPage = Styled.div`
     align-items: center;
   }
   .landing-page__grid, .column--text .content {
-    max-width: 500px;
+    max-width: 600px;
   }
   @media screen and (max-width: 768px) {
     section{

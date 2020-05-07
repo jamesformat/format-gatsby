@@ -1,15 +1,11 @@
 ---
 templateKey: contact-page
 title: Contact Us
-companyName: Format
 emailAddress: info@formatextend.com
-addressLine1: >-
-  25 Lonsdale Rd
-addressLine2: >-
-  London
-postCode: >-
-  NW6 6RA
-phoneNumber: >-
-  020 7625 5007
+companyName: Format
+addressLine1: 23 Montpelier Grove
+addressLine2: London
+postCode: NW5 2XD
+phoneNumber: 020 7625 5007
 ---
 

@@ -18,14 +18,14 @@ landingPageText: >-
   discuss your project.
 gridItems:
   - image: /img/img_2695-warm-square.jpg
-    link: about
-    title: About
+    link: projects
+    title: Projects
   - image: /img/img_1829square.jpg
     link: contact
     title: Contact
   - image: /img/img_1982square.jpg
-    link: blog
-    title: Blog
+    link: ''
+    title: ''
   - image: /img/tumblr_inline_np9w9pbjpz1rwmaks_540.jpg
     link: blog/2019-10-07-a-clean-transformation-in-w9/
     title: ' '

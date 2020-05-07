@@ -1,13 +1,22 @@
-import React from "react";
-import { graphql, StaticQuery } from "gatsby";
-import FullPageGrid from "../components/FullPageGrid";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import FullPageGrid from '../components/FullPageGrid';
 
 const ProjectsPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <FullPageGrid posts={posts}></FullPageGrid>
+    <FullPageGrid posts={posts} />
   );
+};
+
+ProjectsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.any,
+    }),
+  }).isRequired,
 };
 
 export { ProjectsPage };
@@ -33,8 +42,8 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 featuredimage {
                   childImageSharp {
-                    thumbnail: fluid(maxWidth: 300, quality: 20) {
-                      ...GatsbyImageSharpFluid
+                    thumbnail: fixed(width: 200, height: 150, quality: 20) {
+                      ...GatsbyImageSharpFixed
                       src
                       aspectRatio
                     }

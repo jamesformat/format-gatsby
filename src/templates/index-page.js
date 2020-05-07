@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Styled from "styled-components";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
 
-import Layout from "../components/Layout";
-import GridItems from "../components/GridItems";
+import Layout from '../components/Layout';
+import GridItems from '../components/GridItems';
 
 const LandingPageText = Styled.div`
   color: #1cb2bf;
@@ -39,57 +39,55 @@ const LandingPage = Styled.div`
   }
 `;
 
-export const IndexPageTemplate = ({ landingPageText, gridItems }) => {
-  return (
-    <LandingPage>
-      <section className="section section--gradient">
-        <div className="section">
-          <div className="columns">
-            <div className="column column-is-6 column--grid">
-              <div className="landing-page__grid">
-                {gridItems && <GridItems gridItems={gridItems}></GridItems>}
-              </div>
+export const IndexPageTemplate = ({ landingPageText, gridItems }) => (
+  <LandingPage>
+    <section className="section section--gradient">
+      <div className="section">
+        <div className="columns">
+          <div className="column column-is-6 column--grid">
+            <div className="landing-page__grid">
+              {gridItems && <GridItems gridItems={gridItems} />}
             </div>
-            <div className="column is-6 column--text">
-              <div className="content">
-                <LandingPageText className="content">
-                  <ReactMarkdown source={landingPageText}></ReactMarkdown>
-                </LandingPageText>
-              </div>
+          </div>
+          <div className="column is-6 column--text">
+            <div className="content">
+              <LandingPageText className="content">
+                <ReactMarkdown source={landingPageText} />
+              </LandingPageText>
             </div>
           </div>
         </div>
-      </section>
-    </LandingPage>
-  );
-};
+      </div>
+    </section>
+  </LandingPage>
+);
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  landingPageText: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  landingPageText: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  gridItems: PropTypes.arrayOf(PropTypes.shape({
+    image: PropTypes.any,
+    link: PropTypes.string,
+    title: PropTypes.string,
+  })),
+};
+IndexPageTemplate.defaultProps = {
+  gridItems: [],
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        // image={frontmatter.image}
+        // title={frontmatter.title}
+        // heading={frontmatter.heading}
+        // subheading={frontmatter.subheading}
         landingPageText={frontmatter.landingPageText}
         gridItems={frontmatter.gridItems}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+      // description={frontmatter.description}
+      // intro={frontmatter.intro}
       />
     </Layout>
   );
@@ -98,9 +96,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }).isRequired,
 };
 
 export default IndexPage;

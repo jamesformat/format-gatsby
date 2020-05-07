@@ -1,18 +1,22 @@
-import React, { Component } from "react";
-import { Link } from "gatsby";
-import Img from "gatsby-image";
-import Styled from "styled-components";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import simpleId from 'simple-id';
+import Styled from 'styled-components';
 import {
   formatGreen,
   formatBlue,
   formatGray,
-  formatGreenTranslucent
-} from "../variables";
+  formatGreenTranslucent,
+} from '../variables';
 
 const backgroundColors = [formatGray, formatGreen, formatBlue];
 
 const GridItem = Styled.div`
   width: 100%;
+  height: 0;
+  padding-bottom: 100%;
   background: ${formatGreenTranslucent};
   grid-row: span 1;
   grid-column: span 1;
@@ -69,25 +73,23 @@ class GridItems extends Component {
     super(props);
     this.gridColorIndex = 0;
     this.state = {
-      gridItems: null,
-      blocks: null
+      blocks: null,
     };
   }
+
   componentDidMount() {
     const blocks = new Array(10).fill(null);
     const blankSpaces = [3, 6, 7];
     const { gridItems } = this.props;
 
-    blankSpaces.forEach(blankSpace => {
+    blankSpaces.forEach((blankSpace) => {
       blocks[blankSpace] = { blank: true };
     });
 
-    Object.keys(gridItems).forEach((key, index) => {
+    Object.keys(gridItems).forEach((key) => {
       const gridItem = gridItems[key];
 
-      const emptyBlockIndex = blocks.findIndex(block => {
-        return block === null;
-      });
+      const emptyBlockIndex = blocks.findIndex((block) => block === null);
       blocks[emptyBlockIndex] = gridItem;
     });
 
@@ -96,28 +98,29 @@ class GridItems extends Component {
 
   fetchBackgroundColor = () => {
     const color = backgroundColors[this.gridColorIndex];
-    this.gridColorIndex =
-      this.gridColorIndex >= backgroundColors.length - 1
-        ? 0
-        : this.gridColorIndex + 1;
+    this.gridColorIndex = this.gridColorIndex >= backgroundColors.length - 1
+      ? 0
+      : this.gridColorIndex + 1;
     return color;
   };
 
   showBlocks = () => {
-    return this.state.blocks.map((block, index) => {
-      if (!block || !block.title) {
+    const { blocks } = this.state;
+    return blocks.map((block, index) => {
+      const key = simpleId();
+      if (!block || block.isBlank || !block.image) {
         const blockStyle = { backgroundColor: this.fetchBackgroundColor() };
         return (
           <div
-            key={index}
+            key={`block-${key}`}
             className={`grid-item grid-item--blank grid-item-${index + 1}`}
             style={blockStyle}
-          ></div>
+          />
         );
       }
       return (
-        <GridItem key={index} className={`grid-item grid-item-${index + 1}`}>
-          {block.link ? (
+        <GridItem key={key} className={`grid-item grid-item-${index + 1}`}>
+          {block.link && (
             <Link className="grid-item__link" to={`/${block.link}`}>
               {block.image && block.image.childImageSharp ? (
                 <Img
@@ -127,17 +130,16 @@ class GridItems extends Component {
                     aspectRatio: 1,
                     src: block.image.childImageSharp.thumbnail.src,
                     srcSet: block.image.childImageSharp.thumbnail.srcSet,
-                    sizes: "200px 200px"
+                    sizes: '200px 200px',
                   }}
                 />
-              ) : (
-                "noimage"
-              )}
-              {block.title && block.title.replace(" ", "").length > 0 && (
+              ) : null}
+              {block.title && block.title.replace(' ', '').length > 0 && (
                 <h5 className="grid-item__title">{block.title}</h5>
               )}
             </Link>
-          ) : block.image && block.image.childImageSharp ? (
+          )}
+          {!block.link && block.image && block.image.childImageSharp ? (
             <div className="grid-item__linkless">
               <Img
                 fluid={block.image.childImageSharp.thumbnail}
@@ -146,20 +148,27 @@ class GridItems extends Component {
                   aspectRatio: 1,
                   src: block.image.childImageSharp.thumbnail.src,
                   srcSet: block.image.childImageSharp.thumbnail.srcSet,
-                  sizes: "135px 135px"
+                  sizes: '135px 135px',
                 }}
               />
             </div>
-          ) : (
-            "noimage"
-          )}
+          ) : null}
         </GridItem>
       );
     });
   };
+
   render() {
-    return <>{this.state.blocks && <>{this.showBlocks()}</>}</>;
+    const { blocks } = this.state;
+    return blocks && <>{this.showBlocks()}</>;
   }
 }
+
+GridItems.propTypes = {
+  gridItems: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
 export default GridItems;

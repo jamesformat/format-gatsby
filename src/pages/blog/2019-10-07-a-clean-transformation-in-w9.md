@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Elgin Avenue, W9'
+title: 'Maida Vale, W9'
 date: 2015-06-01T16:55:00.000Z
 description: >
   Format are proud to have worked with Knight James Developments on the

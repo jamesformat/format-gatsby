@@ -27,7 +27,7 @@ gridItems:
     link: ''
     title: ''
   - image: /img/tumblr_inline_np9w9pbjpz1rwmaks_540.jpg
-    link: blog/2019-10-07-a-clean-transformation-in-w9/
+    link: ''
     title: ' '
   - image: /img/rear-elevation-completion-official-shots.jpg
     title: ' '

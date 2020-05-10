@@ -2,9 +2,9 @@
 templateKey: index-page
 title: Format Extend
 landingPageText: >-
-  Format is a small architect’s practice based in North-West London with great
-  experience in private residential development but we take on larger projects
-  too. 
+  Format is a small architect’s practice based in North-West London. Our primary
+  experience is in private residential development, but we take on larger
+  projects too. 
 
 
   We work across London and the surrounding area across a range from internal

@@ -15,7 +15,6 @@ const PostItem = styled.div`
   position: relative;
   .post-title {
     position: absolute;
-    opacity: 0;
     bottom: 0;
     left: 0;
     display: block;
@@ -26,6 +25,10 @@ const PostItem = styled.div`
     padding: 9px;
     width: 100%;
     margin-bottom: 0;
+    opacity: 0.9;
+    @media screen and (min-width: 1024px) {
+      opacity: 0;
+    }
   }
   a:hover > .post-title {
     opacity: 1;

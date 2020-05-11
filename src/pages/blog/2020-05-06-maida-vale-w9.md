@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 'Maida Vale, W9'
-date: 2019-11-04T18:27:08.442Z
+date: 2019-11-15T18:27:08.442Z
 description: >-
   Complete renovation of a derelict former coach house. The site was tucked
   behind a row of terraced houses with a narrow driveway to the road and had

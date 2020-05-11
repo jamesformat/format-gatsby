@@ -14,8 +14,8 @@ landingPageText: >-
 
 
   Please call us on 020 7625 5007 or email
-  [info@formatextend.com](info@formatextend.com) to arrange a meeting and
-  discuss your project.
+  [info@formatextend.com](https://formatextend.com/contact/) to arrange a
+  meeting and discuss your project.
 gridItems:
   - image: /img/img_2695-warm-square.jpg
     link: projects

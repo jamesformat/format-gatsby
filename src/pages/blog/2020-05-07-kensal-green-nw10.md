@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 'Kensal Green, NW10'
-date: 2020-03-23T19:49:03.629Z
+date: 2019-12-02T19:49:03.629Z
 description: >-
   A rear extension for a young couple starting a family. We created a snug space
   between the front living room and the back kitchen-diner and by folding the

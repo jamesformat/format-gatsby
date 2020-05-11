@@ -65,7 +65,6 @@ const EmptyPostsStyles = styled.div`
 
 const FullPageGridTemplate = ({ title, featuredimage, slug }) => {
   const friendlyTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
-  console.log({ featuredimage });
   return (
     <PostItem className="post-item">
       <Link to={slug}>

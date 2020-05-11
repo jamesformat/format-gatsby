@@ -124,7 +124,7 @@ class GridItems extends Component {
             <Link className="grid-item__link" to={`/${block.link}`}>
               {block.image && block.image.childImageSharp ? (
                 <Img
-                  fluid={block.image.childImageSharp.thumbnail}
+                  fixed={block.image.childImageSharp.thumbnail}
                   title={block.title}
                   sizes={{
                     aspectRatio: 1,
@@ -142,7 +142,7 @@ class GridItems extends Component {
           {!block.link && block.image && block.image.childImageSharp ? (
             <div className="grid-item__linkless">
               <Img
-                fluid={block.image.childImageSharp.thumbnail}
+                fixed={block.image.childImageSharp.thumbnail}
                 title={block.title}
                 sizes={{
                   aspectRatio: 1,
@@ -165,10 +165,12 @@ class GridItems extends Component {
 }
 
 GridItems.propTypes = {
-  gridItems: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  gridItems:
+    PropTypes.arrayOf(PropTypes.shape({
+      title: PropTypes.string,
+      link: PropTypes.string,
+      image: PropTypes.object,
+    })).isRequired,
 };
 
 export default GridItems;

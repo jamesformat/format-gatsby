@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Img from "gatsby-image";
-import { chunk, sum } from "lodash";
-import PropTypes from "prop-types";
-import Carousel, { Modal, ModalGateway } from "react-images";
+import React, { useState } from 'react';
+import Img from 'gatsby-image';
+import { chunk, sum } from 'lodash';
+import PropTypes from 'prop-types';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const GalleryContent = styled.div`
   grid-template-columns: repeat(3, 1fr);
@@ -21,19 +21,16 @@ const GalleryContent = styled.div`
 `;
 
 const Gallery = ({ title, images, itemsPerRow: itemsPerRowByBreakpoints }) => {
-  const aspectRatios = images.map(image => 1);
+  const aspectRatios = images.map((image) => 1);
   const rowAspectRatioSumsByBreakpoints = itemsPerRowByBreakpoints.map(
-    itemsPerRow =>
-      chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
-        sum(rowAspectRatios)
-      )
+    (itemsPerRow) => chunk(aspectRatios, itemsPerRow).map((rowAspectRatios) => sum(rowAspectRatios)),
   );
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
 
   const closeModal = () => setModalIsOpen(false);
-  const openModal = imageIndex => {
+  const openModal = (imageIndex) => {
     setModalCurrentIndex(imageIndex);
     setModalIsOpen(true);
   };
@@ -42,7 +39,6 @@ const Gallery = ({ title, images, itemsPerRow: itemsPerRowByBreakpoints }) => {
     <GalleryContent className="gallery-content">
       {images.map((image, index) => {
         if (!image) return false;
-        console.log({ itemsPerRowByBreakpoints });
         if (index >= itemsPerRowByBreakpoints[0]) return false;
         return (
           <a key={image.fluid.src} onClick={() => openModal(index)}>
@@ -52,13 +48,13 @@ const Gallery = ({ title, images, itemsPerRow: itemsPerRowByBreakpoints }) => {
               aspectRatio={1}
               sizes={{
                 src: image.thumbnail.src,
-                aspectRatio: 1
+                aspectRatio: 1,
               }}
               style={{
-                objectFit: "cover",
-                maxWidth: "100%"
+                objectFit: 'cover',
+                maxWidth: '100%',
               }}
-            ></Img>
+            />
           </a>
         );
       })}
@@ -68,54 +64,54 @@ const Gallery = ({ title, images, itemsPerRow: itemsPerRowByBreakpoints }) => {
             <Modal
               onClose={closeModal}
               styles={{
-                blanket: base => ({
+                blanket: (base) => ({
                   ...base,
-                  backgroundColor: "#36484ae6",
-                  zIndex: 900
+                  backgroundColor: '#36484ae6',
+                  zIndex: 900,
                 }),
-                dialog: base => ({ ...base, width: "100%" }),
-                positioner: base => ({ ...base, zIndex: 901 })
+                dialog: (base) => ({ ...base, width: '100%' }),
+                positioner: (base) => ({ ...base, zIndex: 901 }),
               }}
             >
               <Carousel
                 views={images.map(({ fluid }) => ({
-                  source: fluid.src
+                  source: fluid.src,
                 }))}
                 currentIndex={modalCurrentIndex}
                 components={{ FooterCount: () => null }}
                 styles={{
-                  footer: base => ({
+                  footer: (base) => ({
                     ...base,
-                    background: "none !important",
-                    color: "#666",
+                    background: 'none !important',
+                    color: '#666',
                     padding: 0,
                     paddingTop: 20,
-                    position: "static",
-                    "& a": { color: "black" }
+                    position: 'static',
+                    '& a': { color: 'black' },
                   }),
-                  header: base => ({
+                  header: (base) => ({
                     ...base,
-                    background: "none !important",
+                    background: 'none !important',
                     padding: 0,
                     paddingBottom: 10,
-                    position: "static"
+                    position: 'static',
                   }),
-                  headerClose: base => ({
+                  headerClose: (base) => ({
                     ...base,
-                    color: "#666",
-                    ":hover": { color: "#DE350B" }
+                    color: '#666',
+                    ':hover': { color: '#DE350B' },
                   }),
-                  view: base => ({
+                  view: (base) => ({
                     ...base,
-                    overflow: "hidden",
-                    objectFit: "contain",
-                    "& > img": {
-                      maxHeight: "75vh",
-                      height: "auto",
-                      width: "auto",
-                      margin: "0 auto"
-                    }
-                  })
+                    overflow: 'hidden',
+                    objectFit: 'contain',
+                    '& > img': {
+                      maxHeight: '75vh',
+                      height: 'auto',
+                      width: 'auto',
+                      margin: '0 auto',
+                    },
+                  }),
                 }}
               />
             </Modal>
@@ -135,7 +131,7 @@ Gallery.propTypes = {
         base64: PropTypes.string,
         sizes: PropTypes.string,
         src: PropTypes.string,
-        srcSet: PropTypes.string
+        srcSet: PropTypes.string,
       }),
       title: PropTypes.string,
       thumbnail: PropTypes.shape({
@@ -143,15 +139,15 @@ Gallery.propTypes = {
         base64: PropTypes.string,
         sizes: PropTypes.string,
         src: PropTypes.string,
-        srcSet: PropTypes.string
-      })
-    })
+        srcSet: PropTypes.string,
+      }),
+    }),
   ),
   itemsPerRow: PropTypes.oneOfType(
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number)
+    PropTypes.arrayOf(PropTypes.number),
   ),
-  title: PropTypes.string
+  title: PropTypes.string,
   // slug: string
 };
 export default Gallery;

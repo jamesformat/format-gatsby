@@ -23,6 +23,9 @@ const LandingPage = Styled.div`
     display: flex;
     align-items: center;
   }
+  .landing-page__grid-wrapper {
+    min-height: 460px;
+  }
   .landing-page__grid, .column--text .content {
     max-width: 600px;
   }
@@ -44,7 +47,7 @@ export const IndexPageTemplate = ({ landingPageText, gridItems }) => (
     <section className="section section--gradient">
       <div className="section">
         <div className="columns">
-          <div className="column column-is-6 column--grid">
+          <div className="landing-page__grid-wrapper column column-is-6 column--grid">
             <div className="landing-page__grid">
               {gridItems && <GridItems gridItems={gridItems} />}
             </div>

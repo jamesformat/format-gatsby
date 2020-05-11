@@ -38,6 +38,13 @@ $family-sans-serif: 'Didact Gothic',sans-serif
     margin-bottom: 1.5rem
     margin-top: 0
 
+.content .tag-page__taglist
+  margin-top: 4rem
+  flex-direction: column
+  align-items: start
+  li
+    padding: 0 0.5rem 1rem 0.5rem
+
 // Helper Classes
 .full-width-image-container
   width: 100vw
@@ -216,15 +223,16 @@ a
     background: $format-green
     @media screen and (min-width: 1024px)
       visibility: hidden
+      visibility: hidden
 
 .button.is-link
   background-color: $format-blue
   &:hover
     background-color: $format-blue--darkened
-// responsiveness
+    +tablet-only
     +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%
+    +mobile
     +mobile
   .blog-list-item header
     display: block

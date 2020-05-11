@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 'East Finchley, N2'
-date: 2020-02-03T17:47:25.057Z
+date: 2019-10-28T17:47:25.057Z
 description: >-
   Format designed a loft and rear extension for a young family in north London.
   The loft space houses two bedrooms and shower room for the kids and the full

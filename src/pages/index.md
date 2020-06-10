@@ -2,11 +2,11 @@
 templateKey: index-page
 title: Format Extend
 landingPageText: >-
-  Format is a small architect’s practice based in North-West London. Our primary
-  experience is in private residential development, but we take on larger
-  projects too. We have worked across London and the surrounding area since 2012
-  and undertake all work stages from concept and planning, to technical design
-  and contract administration. 
+  Format is a small architectural practice based in North-West London. Our
+  primary experience is in private residential development, but we take on
+  larger projects too. We have worked across London and the surrounding area
+  since 2012 and undertake all work stages from concept and planning, to
+  technical design and contract administration. 
 
 
   Please call us on 020 7625 5007 or email <mailto:info@formatextend.com> to

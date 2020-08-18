@@ -13,16 +13,14 @@ landingPageText: >-
   arrange a meeting and discuss your project.
 
 
-  _"We have done 3 major renovations and this one was by far the most
-  complicated but in the end, the least stressful.  Everything was taken care of
-  such that we didn't have to worry about dealing with anything ourselves.  I
-  would highly recommend anyone considering a project to work with Format
-  Extend."_
+  _"Everything was taken care of such that we didn't have to worry about dealing
+  with anything ourselves.  I would highly recommend anyone considering a
+  project to work with Format Extend." - MS, Stoke Newington_
 
 
   _"James' calm manor and creative ideas meant we felt like it was a process
   rather than just an 'architect's idea' in our house.
-   His pride and joy in seeing the finished work was also apparent."_
+   His pride and joy in seeing the finished work was also apparent." - NM, Crouch End_
 gridItems:
   - image: /img/img_2695-warm-square.jpg
     link: projects

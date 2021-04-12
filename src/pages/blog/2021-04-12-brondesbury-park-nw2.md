@@ -3,11 +3,12 @@ templateKey: blog-post
 title: 'Brondesbury Park, NW2'
 date: 2021-04-12T11:55:39.355Z
 description: >-
-  This new build, 2 storey house has been designed as an extension to an
-  existing garage which occupied the bottom of the client's garden. Format
-  administered a series of planning applications and appeals to achieve,
-  planning permission and have now taken the project through to construction,
-  due to be completed later this year.
+  This new build, 2 storey house has been designed as an extension of an
+  existing garage which occupied the bottom of the client's garden.  The
+  garage's form has been extrapolated and a low single storey front projection
+  added. Format administered a series of planning applications and appeals to
+  achieve, planning permission and have now taken the project through to
+  construction, due to be completed later this year.
 
 
   The design features a sunken ground floor which allows sufficient space for 2

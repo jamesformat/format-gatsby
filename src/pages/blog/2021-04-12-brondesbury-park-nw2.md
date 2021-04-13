@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Brondesbury Park, NW2'
+title: 'Mapesbury, NW2'
 date: 2021-04-12T11:55:39.355Z
 description: >-
   This new build, 2 storey house has been designed as an extension of an
@@ -18,7 +18,7 @@ description: >-
   where the house sits up against the boundary with the neighbouring garden
   behind.
 featuredpost: true
-featuredimage: /img/chatsworth-master-orientated-northhd.jpg
+featuredimage: /img/website-size-chatsworth-master-orientated-northhd.jpg
 tags:
   - Projects
   - Architecture
@@ -34,14 +34,14 @@ tags:
   - Planning applications
   - planning appeals
 ---
-![](/img/chatsworth-road-front-elevation-render2.jpg)
+![](/img/website-size-chatsworth-road-front-elevation-render2.jpg)
 
-![](/img/chatsworth-master-orientated-northhd.jpg)
+![](/img/website-size-autosave_2chatsworth-master-orientated-north-ne-view-edges.jpg)
 
-![](/img/autosave_2chatsworth-master-orientated-north-ne-view-edges.jpg)
+![](/img/website-size-chatsworth-kitchen-perspective-no-shadow.jpg)
 
-![](/img/chatsworth-hallway-perspective-heavy-edges.jpg)
+![](/img/website-size-chatsworth-hallway-perspective-heavy-edges.jpg)
 
-![](/img/chatsworth-kitchen-perspective-no-shadow.jpg)
+![](/img/website-size-chatsworth-master-rooflight-and-stairs-clearer.jpg)
 
-![](/img/chatsworth-master-rooflight-and-stairs-clearer.jpg)
+![](/img/website-size-chatsworth-master-orientated-northhd.jpg)

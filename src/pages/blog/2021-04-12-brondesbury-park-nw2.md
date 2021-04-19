@@ -21,6 +21,7 @@ featuredpost: true
 featuredimage: /img/website-size-chatsworth-master-orientated-northhd.jpg
 tags:
   - Projects
+  - Format
   - Architecture
   - Architects
   - London

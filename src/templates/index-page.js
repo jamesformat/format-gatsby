@@ -55,7 +55,7 @@ export const IndexPageTemplate = ({ landingPageText, gridItems }) => (
           <div className="column is-6 column--text">
             <div className="content">
               <LandingPageText className="content">
-                <ReactMarkdown source={landingPageText} />
+                <ReactMarkdown children={landingPageText} />
               </LandingPageText>
             </div>
           </div>

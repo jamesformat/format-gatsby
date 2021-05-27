@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import simpleId from 'simple-id';
+import { v4 as uuidv4 } from 'uuid';
 import Styled from 'styled-components';
 import {
   formatGreen,
@@ -107,7 +107,7 @@ class GridItems extends Component {
   showBlocks = () => {
     const { blocks } = this.state;
     return blocks.map((block, index) => {
-      const key = simpleId();
+      const key = uuidv4();
       if (!block || block.isBlank || !block.image) {
         const blockStyle = { backgroundColor: this.fetchBackgroundColor() };
         return (

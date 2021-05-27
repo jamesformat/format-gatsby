@@ -78,15 +78,13 @@ module.exports = {
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          {
-            family: 'Didact Gothic',
-            subsets: ['latin'],
-            variants: ['400', '400i', '700', '700i'],
-          },
+          'Didact Gothic\400,400i,700,700i',
         ],
+        display: 'swap'
+
       },
     },
     {

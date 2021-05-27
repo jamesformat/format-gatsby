@@ -121,7 +121,7 @@ export const pageQuery = graphql`
                 src
                 aspectRatio
               }
-              thumbnail: fixed(width: 200, height: 200, quality: 20) {
+              thumbnail: fixed(width: 200, height: 200, quality: 90) {
                 ...GatsbyImageSharpFixed
                 src
                 aspectRatio

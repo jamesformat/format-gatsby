@@ -42,7 +42,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 featuredimage {
                   childImageSharp {
-                    thumbnail: fixed(width: 200, height: 150, quality: 20) {
+                    thumbnail: fixed(width: 200, height: 150, quality: 90) {
                       ...GatsbyImageSharpFixed
                       src
                       aspectRatio

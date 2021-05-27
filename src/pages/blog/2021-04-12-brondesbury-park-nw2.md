@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Mapesbury, NW2'
+title: Mapesbury, NW2
 date: 2021-04-12T11:55:39.355Z
 description: >-
   This new build, 2 storey house has been designed as an extension of an
@@ -11,14 +11,9 @@ description: >-
   construction, due to be completed later this year.
 
 
-  The design features a sunken ground floor which allows sufficient space for 2
-  bedroom in the roof space, both with an average head height of at least 2.3m
-  despite the canted ceilings. The eaves space is utilised as storage at the
-  front of the house and to provide roof-lights to the rear of the ground floor,
-  where the house sits up against the boundary with the neighbouring garden
-  behind.
+  The design features a sunken ground floor which allows sufficient space for 2 bedroom in the roof space, both with an average head height of at least 2.3m despite the canted ceilings. The eaves space is utilised as storage at the front of the house and to provide roof-lights to the rear of the ground floor, where the house sits up against the boundary with the neighbouring garden behind.
 featuredpost: true
-featuredimage: /img/website-size-chatsworth-master-orientated-northhd.jpg
+featuredimage: /img/chatsworth-road-front-elevation-render2.jpg
 tags:
   - projects
   - format

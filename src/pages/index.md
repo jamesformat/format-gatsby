@@ -9,18 +9,14 @@ landingPageText: >-
   technical design and contract administration. 
 
 
-  Please call us on 020 7625 5007 or email <mailto:info@formatextend.com> to
-  arrange a meeting and discuss your project.
+  Please call us on 020 7625 5007 or email [info@formatextend.com](mailto:info@formatextend.com) to arrange a meeting and discuss your project.
 
 
-  _"Everything was taken care of such that we didn't have to worry about dealing
-  with anything ourselves.  I would highly recommend anyone considering a
-  project to work with Format Extend." - MS, Stoke Newington_
+  *"Everything was taken care of such that we didn't have to worry about dealing with anything ourselves.  I would highly recommend anyone considering a project to work with Format Extend." - MS, Stoke Newington*
 
 
-  _"James' calm manor and creative ideas meant we felt like it was a process
-  rather than just an 'architect's idea' in our house.
-   His pride and joy in seeing the finished work was also apparent." - NM, Crouch End_
+  *"James' calm manner and creative ideas meant we felt like it was a process rather than just an 'architect's idea' in our house.
+   His pride and joy in seeing the finished work was also apparent." - NM, Crouch End*
 gridItems:
   - image: /img/img_2695-warm-square.jpg
     link: projects
@@ -29,14 +25,13 @@ gridItems:
     link: contact
     title: Contact
   - image: /img/img_1982square.jpg
-    link: ''
-    title: ''
+    link: ""
+    title: ""
   - image: /img/tumblr_inline_np9w9pbjpz1rwmaks_540.jpg
-    link: ''
-    title: ' '
+    link: ""
+    title: " "
   - image: /img/rear-elevation-completion-official-shots.jpg
-    title: ' '
+    title: " "
   - image: /img/rear-square.jpg
-    title: ' '
+    title: " "
 ---
-

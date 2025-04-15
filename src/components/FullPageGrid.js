@@ -63,7 +63,7 @@ const EmptyPostsStyles = styled.div`
   align-items: center;
 `;
 
-const FullPageGridTemplate = ({ title, featuredimage, slug }) => {
+export const FullPageGridTemplate = ({ title, featuredimage, slug }) => {
   const friendlyTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
   return (
     <PostItem className="post-item">
@@ -73,6 +73,7 @@ const FullPageGridTemplate = ({ title, featuredimage, slug }) => {
             <GatsbyImage
               image={featuredimage.childImageSharp.thumbnail}
               title={title}
+              alt={title}
               style={{ width: '200px' }}
               sizes={{
                 aspectRatio:
@@ -128,7 +129,7 @@ FullPageGridTemplate.propTypes = {
     // eslint-disable-next-line react/forbid-prop-types
     childImageSharp: PropTypes.object,
   }).isRequired,
-  fields: PropTypes.shape({
-    slug: PropTypes.string,
-  }).isRequired,
+  // fields: PropTypes.shape({
+  //   slug: PropTypes.string,
+  // }).isRequired,
 };

@@ -134,12 +134,13 @@ class GridItems extends Component {
                   image={block.image.childImageSharp.gatsbyImageData}
                   // fixed={block.image.childImageSharp.thumbnail}
                   title={block.title}
-                  sizes={{
-                    aspectRatio: 1,
-                    src: block.image.childImageSharp.thumbnail.src,
-                    srcSet: block.image.childImageSharp.thumbnail.srcSet,
-                    sizes: '200px 200px',
-                  }}
+                  alt={block.title}
+                  aspectRatio={1}
+                // sizes={{
+                //   src: block.image.childImageSharp.thumbnail.src,
+                //   srcSet: block.image.childImageSharp.thumbnail.srcSet,
+                //   sizes: '200px 200px',
+                // }}
                 />
               ) : null}
               {block.title && block.title.replace(' ', '').length > 0 && (
@@ -153,12 +154,13 @@ class GridItems extends Component {
                 image={block.image.childImageSharp.thumbnail.gatsbyImageData}
                 // fixed={block.image.childImageSharp.thumbnail}
                 title={block.title}
-                sizes={{
-                  aspectRatio: 1,
-                  src: block.image.childImageSharp.thumbnail.src,
-                  srcSet: block.image.childImageSharp.thumbnail.srcSet,
-                  sizes: '135px 135px',
-                }}
+                alt={block.title}
+                aspectRatio={1}
+              // sizes={{
+              //   src: block.image.childImageSharp.thumbnail.src,
+              //   srcSet: block.image.childImageSharp.thumbnail.srcSet,
+              //   sizes: '135px 135px',
+              // }}
               />
             </div>
           ) : null}

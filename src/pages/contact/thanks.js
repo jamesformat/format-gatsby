@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import { Link } from "gatsby";
 
-export default () => (
+export default Thanks = () => (
   <Layout>
     <section className="section">
       <div className="container">

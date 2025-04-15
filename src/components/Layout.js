@@ -59,7 +59,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div>{children || null}</div>
     </div>
   );
 };
@@ -70,7 +70,5 @@ TemplateWrapper.propTypes = {
     PropTypes.node,
   ]),
 };
-TemplateWrapper.defaultProps = {
-  children: null,
-};
+
 export default TemplateWrapper;

@@ -17,7 +17,6 @@ const BlogStyles = styled.div`
   }
 `;
 
-
 export const BlogPostTemplate = ({
   content,
   contentComponent,

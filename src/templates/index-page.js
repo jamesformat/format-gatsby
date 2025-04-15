@@ -106,30 +106,20 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        landingPageText
-        gridItems {
-          title
-          link
-          image {
-            childImageSharp {
-              fixed(width: 200, height: 200, quality: 100) {
-                ...GatsbyImageSharpFixed
-                src
-                aspectRatio
-              }
-              thumbnail: fixed(width: 200, height: 200, quality: 90) {
-                ...GatsbyImageSharpFixed
-                src
-                aspectRatio
-              }
-            }
+export const pageQuery = graphql`query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    frontmatter {
+      landingPageText
+      gridItems {
+        title
+        link
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 200, height: 200, quality: 100, layout: FIXED)
+            thumbnail: gatsbyImageData(width: 200, height: 200, quality: 90, layout: FIXED)
           }
         }
       }
     }
   }
-`;
+}`;

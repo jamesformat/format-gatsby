@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet';
 import { withPrefix, Link } from 'gatsby';
 import CookieConsent from 'react-cookie-consent';
 import Navbar from './Navbar';
-import './all.sass';
+import './all.scss';
+import 'bulma/css/bulma.css';
 import useSiteMetadata from './SiteMetadata';
 
 const TemplateWrapper = ({ children }) => {
@@ -20,7 +21,7 @@ const TemplateWrapper = ({ children }) => {
         <Link to="/privacy">Read our Privacy Policy</Link>
       </CookieConsent>
       <Helmet>
-        <html lang="en" />
+        <html data-theme="light" lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
 

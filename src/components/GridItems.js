@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 import { v4 as uuidv4 } from 'uuid';
 import Styled from 'styled-components';
 import {
@@ -62,6 +63,12 @@ const GridItem = Styled.div`
     bottom: 0;
     left: 0;
     right: 0;
+    max-width:100%;
+    max-height:100%;
+    .gatsby-image-wrapper {
+      max-width:100%;
+      max-height:100%;
+    }
   }
   .gatsby-image-wrapper {
     height: 100%;
@@ -123,8 +130,9 @@ class GridItems extends Component {
           {block.link && (
             <Link className="grid-item__link" to={`/${block.link}`}>
               {block.image && block.image.childImageSharp ? (
-                <Img
-                  fixed={block.image.childImageSharp.thumbnail}
+                <GatsbyImage
+                  image={block.image.childImageSharp.gatsbyImageData}
+                  // fixed={block.image.childImageSharp.thumbnail}
                   title={block.title}
                   sizes={{
                     aspectRatio: 1,
@@ -141,8 +149,9 @@ class GridItems extends Component {
           )}
           {!block.link && block.image && block.image.childImageSharp ? (
             <div className="grid-item__linkless">
-              <Img
-                fixed={block.image.childImageSharp.thumbnail}
+              <GatsbyImage
+                image={block.image.childImageSharp.thumbnail.gatsbyImageData}
+                // fixed={block.image.childImageSharp.thumbnail}
                 title={block.title}
                 sizes={{
                   aspectRatio: 1,

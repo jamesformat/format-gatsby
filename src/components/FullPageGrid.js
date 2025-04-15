@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import Layout from './Layout';
 import { formatGreen } from '../variables';
@@ -70,8 +70,8 @@ const FullPageGridTemplate = ({ title, featuredimage, slug }) => {
       <Link to={slug}>
         {featuredimage && (
           <>
-            <Img
-              fixed={featuredimage.childImageSharp.thumbnail}
+            <GatsbyImage
+              image={featuredimage.childImageSharp.thumbnail}
               title={title}
               style={{ width: '200px' }}
               sizes={{
@@ -116,6 +116,7 @@ const FullPageGrid = ({ posts }) => (
 );
 
 FullPageGrid.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   posts: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
@@ -124,6 +125,10 @@ export default FullPageGrid;
 FullPageGridTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   featuredimage: PropTypes.shape({
+    // eslint-disable-next-line react/forbid-prop-types
     childImageSharp: PropTypes.object,
+  }).isRequired,
+  fields: PropTypes.shape({
+    slug: PropTypes.string,
   }).isRequired,
 };
